@@ -23,7 +23,8 @@ public class HomeWork3 {
         $("#firstName").setValue("Boris");
         $("#lastName").setValue("Dusan");
         $("#userEmail").setValue("BorisDusan@mail.ru");
-        $("[for=\"gender-radio-1\"]").click();
+        $$("[for=\"gender-radio-1\"]").findBy(text("Male")).click();
+        //$("[for=\"gender-radio-1\"]").click();
         $("#userNumber").setValue("0123456789");
         $("#dateOfBirthInput").click();
 //                executeJavaScript(
@@ -34,8 +35,8 @@ public class HomeWork3 {
         $(".react-datepicker__month-select").selectOption("April");
         $(".react-datepicker__day--001").click();
         $("#subjectsInput").setValue("E").pressEnter();
-        $("[for='hobbies-checkbox-1']").click();
-        $("[for='hobbies-checkbox-3']").click();
+        $$(".custom-control-label").findBy(text("Music")).click();
+        $$(".custom-control-label").findBy(text("Sports")).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/Picture.png"));
         $("#currentAddress").setValue("Grow street 1");
         $("#react-select-3-input").setValue("Haryana").pressEnter();
@@ -48,7 +49,7 @@ public class HomeWork3 {
         $(".table-responsive ").shouldHave(text("0123456789"));
         $(".table-responsive ").shouldHave(text("01 April,2007"));
         $(".table-responsive ").shouldHave(text("English"));
-        $(".table-responsive ").shouldHave(text("Sports, Music"));
+        $(".table-responsive ").shouldHave(text("Music, Sports"));
         $(".table-responsive ").shouldHave(text("Picture.png"));
         $(".table-responsive ").shouldHave(text("Grow street 1"));
         $(".table-responsive ").shouldHave(text("Haryana Karnal"));

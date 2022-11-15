@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomeWork3 {
@@ -21,7 +23,7 @@ public class HomeWork3 {
         $("#firstName").setValue("Boris");
         $("#lastName").setValue("Dusan");
         $("#userEmail").setValue("BorisDusan@mail.ru");
-        $("[for='gender-radio-1']").click();
+        $("[for=\"gender-radio-1\"]").click();
         $("#userNumber").setValue("0123456789");
         $("#dateOfBirthInput").click();
 //                executeJavaScript(
@@ -39,5 +41,25 @@ public class HomeWork3 {
         $("#react-select-3-input").setValue("Haryana").pressEnter();
         $("#react-select-4-input").setValue("Karnal").pressEnter();
         $("#submit").click();
+
+        $(".table-responsive ").shouldHave(text("Boris Dusan"));
+        $(".table-responsive ").shouldHave(text("BorisDusan@mail.ru"));
+        $(".table-responsive ").shouldHave(text("Male"));
+        $(".table-responsive ").shouldHave(text("0123456789"));
+        $(".table-responsive ").shouldHave(text("01 April,2007"));
+        $(".table-responsive ").shouldHave(text("English"));
+        $(".table-responsive ").shouldHave(text("Sports, Music"));
+        $(".table-responsive ").shouldHave(text("Picture.png"));
+        $(".table-responsive ").shouldHave(text("Grow street 1"));
+        $(".table-responsive ").shouldHave(text("Haryana Karnal"));
+
+
+
+
+
+
+
+
+
     }
 }

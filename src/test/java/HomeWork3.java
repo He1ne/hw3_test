@@ -52,14 +52,5 @@ public class HomeWork3 {
         $(".table-responsive ").shouldHave(text("Picture.png"));
         $(".table-responsive ").shouldHave(text("Grow street 1"));
         $(".table-responsive ").shouldHave(text("Haryana Karnal"));
-
-
-
-
-
-
-
-
-
     }
 }
